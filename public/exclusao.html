@@ -1,0 +1,97 @@
+<style>
+    .title-page {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+        font-family: monospace;
+    }
+
+    .container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    table {
+        width: 80%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+    }
+
+    th,
+    td {
+        padding: 10px;
+        text-align: center;
+        border: 1px solid #000;
+    }
+
+    th {
+        background-color: #444;
+        color: #fff;
+    }
+
+    tbody tr:nth-child(odd) {
+        background-color: #f2f2f2;
+    }
+
+    .btn-excluir {
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 16px;
+        background-color: #A57A00;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        margin-left: 10.5em;
+    }
+
+    .btn-excluir:hover {
+        background-color: #885900;
+    }
+</style>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste Apolo</title>
+    <script type="module" src="../assets/js/script.js"></script>
+    <link rel="stylesheet" type="text/css" href="../assets/css/style.css" media="screen" />
+    <link rel="shortcut icon" href="../assets/img/favicon.ico" />
+</head>
+
+<body>
+
+    <div id="header-placeholder"></div>
+
+    <div class="title-page">
+        <h1>Exclusão de Usuário</h1>
+    </div>
+
+    <div class="container">
+        <table id="tabela-usuarios">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Email</th>
+                    <th>Selecionar</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+        <button id="btnExcluir" class="btn-excluir">Excluir Usuário</button>
+    </div>
+
+    <div id="mensagem" style="text-align: center; margin-top: 20px; color: white;"></div>
+
+    <div id="footer-placeholder"></div>
+</body>
+
+</html>

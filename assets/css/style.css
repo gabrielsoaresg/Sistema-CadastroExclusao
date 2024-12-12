@@ -1,0 +1,15 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    vertical-align: baseline;
+    list-style: none;
+    
+}
+
+body {
+    margin-top: 60px;
+    background-color: #D9C8B4;
+    font-family: monospace;
+    font-size: 15px;
+}
+

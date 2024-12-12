@@ -1,0 +1,160 @@
+<style>
+    .title-page {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+        font-family: monospace;
+    }
+
+    .box {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgba(0, 0, 0, 0.2);
+        padding: 15px;
+        border-radius: 15px;
+        width: 20%;
+        color: white;
+    }
+
+    fieldset {
+        border: 3px solid #593E1C;
+        padding: 10px
+    }
+
+    legend {
+        border: 1px solid #8c7961;
+        padding: 10px;
+        text-align: center;
+        border-radius: 8px;
+    }
+
+    .inputBox {
+        position: relative;
+        margin-bottom: 20px;
+        margin-top: 5px;
+    }
+
+    .inputUser {
+        background: none;
+        border: none;
+        border-bottom: 1px solid white;
+        outline: none;
+        color: white;
+        font-size: 15px;
+        width: 100%;
+        letter-spacing: 2px;
+    }
+
+    .labelInput {
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        pointer-events: none;
+        transition: .5s;
+    }
+
+    .inputUser:focus~.labelInput,
+    .inputUser:valid~.labelInput {
+        top: -20px;
+        font-size: 12px;
+        color: #593E1C;
+    }
+
+    .div-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .btn-submit {
+        width: 60%;
+        border-radius: 4px;
+        height: 2.5em;
+        background-color: #86796a;
+        color: #ffffff;
+        border: 1px solid #ffffff;
+        font-size: 15px;
+        font-family: monospace;
+        cursor: pointer;
+    }
+
+    .btn-submit:hover {
+        transition: .2s;
+        background-color: #D9C6B4;
+        color: #000;
+        border: 1px solid #000;
+    }
+
+    .inputBox span {
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        font-size: 18px;
+        color: white;
+        cursor: pointer;
+    }
+
+    .inputBox i {
+        pointer-events: none;
+    }
+</style>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste Apolo</title>
+    <script type="module" src="../assets/js/script.js"></script>
+    <link rel="stylesheet" type="text/css" href="../assets/css/style.css" media="screen" />
+    <link rel="shortcut icon" href="../assets/img/favicon.ico" />
+</head>
+
+<body>
+
+    <div id="header-placeholder"></div>
+
+    <div class="title-page">
+        <h1>Cadastro de Usuário</h1>
+    </div>
+
+    <div class="box">
+        <form id="formCadastro">
+            <fieldset>
+                <legend><b>Formulário</b></legend>
+                <div class="inputBox">
+                    <input type="text" name="Nome" id="nome" class="inputUser" required>
+                    <label for="nome" class="labelInput">Nome:</label>
+                </div>
+                <br>
+                <div class="inputBox">
+                    <input type="text" name="Email" id="email" class="inputUser" required>
+                    <label for="email" class="labelInput">Email:</label>
+                </div>
+                <br>
+                <div class="inputBox">
+                    <input type="password" name="password" id="password" class="inputUser" required>
+                    <label for="password" class="labelInput">Senha:</label>
+                    <span id="password-toggler">
+                        <i id="toggler" class="bi bi-eye-slash"></i>
+                    </span>
+                </div>
+                <div class="div-button">
+                    <input type="submit" name="submit" id="submit" class="btn-submit" value="Cadastrar"">
+                </div>
+            </fieldset>
+        </form>
+    </div>
+
+    <div id=" mensagem" style="text-align: center; margin-top: 20px; color: white;"></div>
+
+
+    <div id="footer-placeholder"></div>
+</body>
+
+</html>
